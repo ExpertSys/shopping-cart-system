@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript">
+    </script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/bxl0woh.css">
+</head>
+<body>
+    <button id='showAllScreens'>Show all screens</button>
+    <div id="app-launch">
+            <div id="mobile-home" class="mobile-screen home">
+                <header>
+                    <nav>
+                        <div id="burger-menu" class="home-menu">
+                            <img src="images/b-menu@3x.png" width="26.5" height="19.78">
+                        </div>
+                        <div id="logo">
+                            <img src="images/logo@3x.png" width="151.86" height="44">
+                        </div>
+                        <div id="search">
+                            <img src="images/search@3x.png" width="24.5" height="24.5">
+                        </div>
+                    </nav>
+                </header>
+
+                <section id="mainContent">
+                    <div id="current-sale">
+                        <h2>Summer sale<br>
+                        15% OFF
+                        </h2>
+                        <button class="shop_now-btn">Shop Now</button>
+                    </div>
+
+                    <div id="mailing-list">
+                        <p>Signup with our mailing list for an additional 25% off.</p>
+                        <button id='coupon'>Sign up</button>
+                    </div>
+                </section>
+            </div>
+
+            <div id="mobile-sales" class="mobile-screen sales">
+                <header>
+                    <nav>
+                        <div id="burger-menu" class="home-menu">
+                            <img src="images/b-menu@3x.png" width="26.5" height="19.78">
+                        </div>
+                        <div id="logo">
+                            <img src="images/logo@3x.png" width="151.86" height="44">
+                        </div>
+                        <div id="search" style="position:relative;top:-5px;">
+                            <img src="images/shop-cart@3x.png" width="32" height="33" class="shopping-cart">
+                            <div id='heart'></div>
+                        </div>
+                    </nav>
+                </header>
+
+                <div id="notification" class='notification'>
+                    <p></p>
+                </div>
+
+                <section id="content">
+                    <div class="section-title">
+                        <h1>Summer Selection</h1>
+                        <p><span id="summerTotalItems">32</span> Styles</p>
+                    </div>
+                    <div id="size-chart">
+                        <ul>
+                            <li class='buttonsMain'>
+                                <li class='sizeActive optionsHeader'>
+                                    Size: <span id='current-size'>&nbsp;&#x3f;</span>
+                                </li>
+                                <li class='sizeBtn btnActive sizeActive'>
+                                    S
+                                </li>
+                                <li class='sizeBtn sizeActive'>
+                                    M
+                                </li>
+                                <li class='sizeBtn sizeActive'>
+                                    L
+                                </li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="sectionItems">
+                    </div>
+                   
+
+                    <div id="pull-data">
+                         <button id="load-products-btn">Load More Products</button>
+                    </div>
+                    
+                    <span class="errorNotifier"></span>
+                </section>
+            </div>
+
+            <div id="mobile-menu" class="mobile-screen menu">
+                <div id="logo-twist">
+                    <img src="images/logo-2@3x.png" width="128" height="148">
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li class="mobile-menu-tabs tab-active home-btn">
+                            Home
+                        </li>
+                        <li class="mobile-menu-tabs bag-screen">
+                            My Bag
+                        </li>
+                        <li class="mobile-menu-tabs sale-items">
+                            Sale
+                        </li>
+                        <li class="mobile-menu-tabs" id="contact-btn">
+                            Contact Us
+                        </li>
+                        <li id="close-menu"><img src="images/close@3x.png" width="56" height="48"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mobile-bag" class="mobile-screen sales">
+                <header>
+                    <nav>
+                        <div id="burger-menu" class="home-menu">
+                            <img src="images/b-menu@3x.png" width="26.5" height="19.78">
+                        </div>
+                        <div id="logo">
+                            <img src="images/logo@3x.png" width="151.86" height="44">
+                        </div>
+                        <div id="searchs" style="position:relative;top:-5px;" class="shopping-cart">
+                            <img src="images/shop-cart@3x.png" width="32" height="33">
+                        </div>
+                    </nav>
+                </header>
+
+                <div id="changeProvince">
+                    <button id="prov-btn">Change Province To Quebec</button>
+                    <p id='provinceFaq'>The total amount of tax applied will also
+                        be modified.
+                    </p>
+                </div>
+                <div id="bag-content">
+                        <h1 id="bag-title">My Bag</h1>
+                    <div id="bag-header">
+                        <div id="bag-items">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="purchase-confirmation">
+                    <div id="item-total">
+                        <p>Item(s) Total <span id='couponDisplay'></span></p>
+                        <div id="total-hr"></div>
+                        <p id="shipment-info">Shipping: <span id='ship-total'>3.99</span></p>
+                        <p>Subtotal: <span id='sub-total'></span></p>
+                        <p>Hst/Pst: <span id='tax-total'></span></p>
+                    </div>
+                    <div id="complete">
+                        <p id="bag-home">Go Back</p>
+                        <p>Total</p>
+                        <p><span id='total'></span></p>
+                        <img src="images/confirm-arrow@3x.png" width="20" height="18" id='pay'>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/cart.js"></script>
+<script type="text/javascript" src="js/transitions.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
